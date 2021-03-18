@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.auth {
+  background-color: #eee;
+
+  width: 30%;
+}
+.example-full-width{
+
+    width: 100%;
+}
+
+
+mat-card,.line-chart,body,.page-content,.light-logo{
+
+    position: relative;
+}
+
+
+.loader{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 11111;
+    left: 0%;
+    top: 0%;
+    background: rgba(255,255,255,.6);
+ 
+}
+
+.transparent-loader{
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 11111;
+    left: 0%;
+    top: 0%;
+    background: rgba(255,255,255,.7);
+}
+
+.cat-parent{
+    background-color: #eee;
+
+}
+.example-margin {
+  margin: 0 10px;
+}
+
+.mat-chip-list-wrapper{
+
+  justify-content: flex-end;
+}

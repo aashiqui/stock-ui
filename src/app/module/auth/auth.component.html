@@ -1,0 +1,61 @@
+
+<div class="auth d-flex h-100 w-100 justify-content-center align-items-center">
+
+    <mat-card class="example-card ">
+        <mat-card-header class="  d-flex  justify-content-center align-items-center">
+         
+          <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form
+          class="example-form"
+          [formGroup]="signinForm"
+          (ngSubmit)="onSubmit()"
+        >
+         
+            <mat-form-field  class="example-full-width"   appearance="outline">
+              <input
+                matInput
+                formControlName="username"
+                placeholder="Email"
+                appearance="outline"
+              />
+              <mat-error
+                *ngIf="
+                  username.invalid &&
+                  (username.dirty || username.touched)
+                "
+              >
+                Username is required
+              </mat-error>
+            </mat-form-field>
+    
+            <mat-form-field class="example-full-width"   appearance="outline">
+              <input
+                matInput
+                formControlName="password"
+                placeholder="Password"
+                type="password"
+                appearance="outline"
+              />
+              <mat-error *ngIf="password?.invalid">Password is required</mat-error>
+            </mat-form-field>
+            <mat-error *ngIf="errMsg" class="mat-error-msg p-2">{{ errMsg }}</mat-error>
+            <button
+              type="submit"
+              [disabled]='!signinForm.valid'
+              mat-raised-button 
+              color="primary"
+              class="btn-block"
+            >
+              Log in
+            </button>
+    
+    
+          
+        </form>
+    
+    </mat-card-content>
+      </mat-card>
+        
+    </div>

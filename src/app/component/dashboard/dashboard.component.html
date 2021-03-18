@@ -1,0 +1,19 @@
+<div class=" w-50 center justify-content-center align-items-center h-100 m-auto" style="
+flex-wrap: wrap;
+">
+
+    <div class="d-flex justify-content-center m-4"> <button (click)="logout()" mat-raised-button color="primary" class="m-4">
+            <mat-icon>logout</mat-icon> Logout
+        </button>
+    </div>
+
+    <div class="flex-item">
+        <div style="display: block;">
+            <canvas baseChart width="400" height="400" [datasets]="lineChartData" [labels]="lineChartLabels"
+                [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+                [chartType]="lineChartType"  (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+        </div>
+    </div>
+
+</div>
